@@ -1,0 +1,74 @@
+<head>
+  <title>Wearable Study</title>
+	<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzevId2bOUHbxS-h42OGrQyfWyB96_1yM">
+	</script>
+  <script type="text/javascript" src="oms.min.js"></script>
+  <style>
+  .buttonRequest{
+    width: 100px; 
+    height: 100px; 
+    position:absolute; 
+    top:50px; 
+    right:50px; 
+    z-index:999; 
+    background: url('../images/photo_button.png') center center;
+    background-size: auto 80px;
+    background-color: #fff; 
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 20px 0px #000;
+    cursor: pointer;
+  }
+  .buttonRequest:hover, .buttonRequest:active {
+    opacity:0.85; 
+    box-shadow:0px 0px 10px 0px #000;
+  }
+  .messageRequest{
+    width: 300px; 
+    height: 60px; 
+    position:absolute; 
+    top:162px; 
+    right:45px; 
+    z-index: 1000; 
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 0px #000;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0;
+  }
+  .messageRequest:before{
+    content: '';
+    display: block;
+    width: 0px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #fff transparent;
+    position: relative;
+    left: 80%;
+    top: -25px;
+    height: 10px;
+    z-index: 1001;
+  }
+  .showMessageRequest{
+    opacity: 1;    
+  }
+  </style>
+</head>
+
+<body>
+  {{#if dataReady}}
+    {{> map}}
+  {{/if}}
+</body>
+
+<template name="map">
+  <div class="messageRequest" id="messageRequestPhoto"></div>
+  <div class="buttonRequest" id="requestPhoto"></div>
+	<div id="map-canvas"></div>
+    {{#each data}}
+      {{addMapMarker}}
+    {{/each}}
+</template>
