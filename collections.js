@@ -76,6 +76,18 @@ ButtonClicks = new Mongo.Collection("wi7no-buttonClicks");*/
 Clicks = new Mongo.Collection("wi8full-clicks");
 ButtonClicks = new Mongo.Collection("wi8full-buttonClicks");*/
 
-Data = new Mongo.Collection("wi8no-data");
+/*Data = new Mongo.Collection("wi8no-data");
 Clicks = new Mongo.Collection("wi8no-clicks");
-ButtonClicks = new Mongo.Collection("wi8no-buttonClicks");
+ButtonClicks = new Mongo.Collection("wi8no-buttonClicks");*/
+
+
+
+/* First User Test (Vishakha Ghosh - 09 may 2015) */
+
+/*Data = new Mongo.Collection("wi9full-data");
+Clicks = new Mongo.Collection("wi9full-clicks");
+ButtonClicks = new Mongo.Collection("wi9full-buttonClicks");*/
+
+Data = new Mongo.Collection("wi9no-data");
+Clicks = new Mongo.Collection("wi9no-clicks");
+ButtonClicks = new Mongo.Collection("wi9no-buttonClicks");
