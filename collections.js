@@ -82,12 +82,18 @@ ButtonClicks = new Mongo.Collection("wi8no-buttonClicks");*/
 
 
 
-/* First User Test (Vishakha Ghosh - 09 may 2015) */
+/* First User Test (Vishakha Ghosh - 09 may 2015) - CANCELED */
 
 /*Data = new Mongo.Collection("wi9full-data");
 Clicks = new Mongo.Collection("wi9full-clicks");
 ButtonClicks = new Mongo.Collection("wi9full-buttonClicks");*/
 
-Data = new Mongo.Collection("wi9no-data");
+/*Data = new Mongo.Collection("wi9no-data");
 Clicks = new Mongo.Collection("wi9no-clicks");
-ButtonClicks = new Mongo.Collection("wi9no-buttonClicks");
+ButtonClicks = new Mongo.Collection("wi9no-buttonClicks");*/
+
+/* First User test (11 may 2015 12:00 - Vancouver Time) */
+
+Data = new Mongo.Collection("11may2015w1i1full-data");
+Clicks = new Mongo.Collection("11may2015w1i1full-clicks");
+ButtonClicks = new Mongo.Collection("11may2015w1i1full-buttonClicks");
