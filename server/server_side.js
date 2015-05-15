@@ -10,6 +10,10 @@ Meteor.publish("clicks", function() {
   return Clicks.find();
 });
 
+Meteor.publish("camera", function() {
+  return Camera.find();
+});
+
 // Authentication token
 var auth = 'jQ5a6odf3qJfhjyZG8M73C3A8JQyHk6w7R';
 
@@ -33,6 +37,11 @@ Meteor.methods({
   'insertLastClick': function() {
     var date = new Date();
     ButtonClicks.insert({dateTime: date});
+    return date;
+  },
+  'insertCameraNotAvailable': function() {
+    var date = new Date();
+    Camera.insert({dateTime: date});
     return date;
   }
 

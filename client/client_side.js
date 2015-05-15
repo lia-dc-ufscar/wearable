@@ -2,6 +2,7 @@
 dataSubscription = Meteor.subscribe("data");
 ButtonClicks = Meteor.subscribe("buttonClicks");
 Clicks = Meteor.subscribe("clicks");
+Camera = Meteor.subscribe("camera");
 
 
 /*--------------MAP-------------*/
@@ -57,7 +58,20 @@ Template.map.events = {
           }
         });
 
-        if (lastPhotoId2._id == lastPhotoId._id) {
+        if (lastPhotoId2 != null) {
+          if (lastPhotoId2._id == lastPhotoId._id) {
+            var ret = Meteor.call("insertCameraNotAvailable", function(error, result) {
+              console.log('Camera not available inserted');
+            });
+
+            showMessage("Sorry, the camera is not available right now.");
+          }
+        }
+        else {
+          var ret = Meteor.call("insertCameraNotAvailable", function(error, result) {
+            console.log('Camera not available inserted');
+          });
+
           showMessage("Sorry, the camera is not available right now.");
         }
         setBusy(false);
