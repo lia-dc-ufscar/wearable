@@ -234,6 +234,17 @@ HTTP.methods({
     });
     html += '</table><br /><br />'; 
 
+    html += '<h1>Camera not available message (not attended photo request)</h1>';
+    html += '<table border="1">';
+    html += '<tr><td align="center"><b>Document id</b><td align="center"><b>Datetime</b></td></tr>';
+    Camera.find().fetch().forEach(function(item) {
+      html += '<tr><td align="center">' + item._id + '</td><td align="center">' + item.dateTime + '</td>';
+      html += '</tr>';
+    });
+    html += '</table><br /><br />'; 
+
+
+
     html += '</html>';
 
     return html;
